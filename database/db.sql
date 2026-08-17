@@ -15,7 +15,7 @@ CREATE TABLE pedidos (
     preco FLOAT NOT NULL,
     categoria VARCHAR(100) NOT NULL,
     id_cliente INT NOT NULL,
-    CONSTRAINT fk_pedidos_clientes FOREIGN KEY (id_cliente) REFERENCES clientes(id)
+    FOREIGN KEY (id_cliente) REFERENCES clientes(id)
 
 
 );
