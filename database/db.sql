@@ -8,7 +8,7 @@ CREATE TABLE clientes (
     
     );
 
-CREATE TABLE pedidos (
+CREATE TABLE pratos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao VARCHAR(100) NOT NULL,
