@@ -77,7 +77,6 @@ $resultado = mysqli_query($conexao, $sql);
                     </tr>
                 <?php } ?>
             </table>
-<<<<<<< HEAD
         </div>                                           
                 
          <h2>Cadastrado de usuario</h2>
@@ -94,31 +93,6 @@ $resultado = mysqli_query($conexao, $sql);
                         <td><?php echo $pratos["Email"] ?></td>
                         <td>
                            
-=======
-        </div>
-
-        <div>
-            <h2>Adicione um novo usuario!</h2>
-            <form action="public/cadastrar_usuario.php" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome">
-                <br>
-                <label for="descricao">Email:</label>
-                <input type="text" name="email">
-                <br>
-                <button type="submit">Cadastrar</button>
-            </form>
-        </div>
-
-        <h2>Cadastrado de usuario</h2>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>-
-            </tr>
-        </table>
->>>>>>> 2e6daefcf0376dfcc13be0a444a83dbaca523060
 
     </main>
     <footer>
