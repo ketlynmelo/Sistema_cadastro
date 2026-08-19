@@ -69,7 +69,3 @@ $resultado = mysqli_query($conexao, $sql);
 </body>
 
 </html>
-
-</body>
-
-</html>
