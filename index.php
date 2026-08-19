@@ -1,6 +1,8 @@
 <?php
 
 include "infra/conexao.php";
+$sql = "SELECT * FROM pratos";
+$resultado = mysqli_query($conexao, $sql);
 ?>
 
 <!DOCTYPE html>
