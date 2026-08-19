@@ -1,7 +1,4 @@
-.listar-pratos {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: rgb(150, 150, 231);
-    color:black
-}
+body{
 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
