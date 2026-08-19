@@ -21,7 +21,7 @@ $resultado = mysqli_query($conexao, $sql);
     </header>
     <main>
         <h2>Adicione um novo prato!</h2>
-        <form action="public/cadastrar.php" method="POST">
+        <form action="public/cadastrar_pratos.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" name="nome">
             <br>
@@ -81,7 +81,7 @@ $resultado = mysqli_query($conexao, $sql);
 
         <div>
             <h2>Adicione um novo usuario!</h2>
-            <form action="public/cadastrar.php" method="POST">
+            <form action="public/cadastrar_usuario.php" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome">
                 <br>
