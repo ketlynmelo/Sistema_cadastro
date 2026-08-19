@@ -4,16 +4,22 @@ include "../infra/conexao.php";
 
 $nome = $_POST["nome"];
 $email = $_POST["email"];
+$id = $_POST["id"];
 
-$stmt = $conexao-> prepare (
-$stmt = $conexao->prepare(
-    "INSERT INTO usuario (nome, email) VALUES (?, ?)"
+$sql = "INSERT INTO clientes (nome, email, id) VALUES (?,?,?)";
+
+$stmt = mysqli_prepare($conexao, $sql);
+
+mysqli_stmt_bind_param(
+    $stmt,
+    "ssi",
+    $nome,
+    $email,
+    $id
 );
 
-$stmt -> bind_param ("ssi", $nome, $email);
-$stmt -> execute();
+mysqli_stmt_execute($stmt);
 
-)
 
 header("Location: ../index.php");
 ?>

@@ -19,7 +19,7 @@ include "infra/conexao.php";
     </header>
     <main>
         <h2>Adicione um novo prato!</h2>
-        <form action="public/cadastrar.php" method="POST">
+        <form action="public/cadastrar_pratos.php" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" name="nome">
             <br>
@@ -31,6 +31,25 @@ include "infra/conexao.php";
             <br>
             <label for="categoria">Categoria:</label>
             <input type="text" name="categoria">
+            <br>
+            <label for="id_cliente">Cliente:</label>
+            <select name="id_cliente">
+                <option value="1">Selecione</option>
+
+                <?php
+                
+                $sql = "SELECT * FROM clientes";
+                $clientes = mysqli_query($conexao,$sql);
+
+                while ($cliente = mysqli_fetch_assoc($clientes)) { ?>
+
+                <option value=" <?php echo $cliente["id"] ?>  "> <?php echo $cliente["nome"] ?> </option>
+
+
+                <?php }; ?>
+
+            
+            </select>
             <br>
             <button type="submit">Cadastrar</button>
         </form>
@@ -56,6 +75,7 @@ include "infra/conexao.php";
                     </tr>
                 <?php } ?>
             </table>
+<<<<<<< HEAD
         </div>                                           
                 
          <h2>Cadastrado de usuario</h2>
@@ -72,6 +92,31 @@ include "infra/conexao.php";
                         <td><?php echo $pratos["Email"] ?></td>
                         <td>
                            
+=======
+        </div>
+
+        <div>
+            <h2>Adicione um novo usuario!</h2>
+            <form action="public/cadastrar_usuario.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome">
+                <br>
+                <label for="descricao">Email:</label>
+                <input type="text" name="email">
+                <br>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <h2>Cadastrado de usuario</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>-
+            </tr>
+        </table>
+>>>>>>> 2e6daefcf0376dfcc13be0a444a83dbaca523060
 
     </main>
     <footer>

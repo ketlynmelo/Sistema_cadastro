@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -117,4 +118,9 @@ footer {
     margin-top: 40px;
     text-align: center;
     padding: 20px;
+=======
+body{
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+>>>>>>> 2e6daefcf0376dfcc13be0a444a83dbaca523060
 }
