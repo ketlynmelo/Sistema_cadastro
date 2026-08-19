@@ -79,7 +79,6 @@ $resultado = mysqli_query($conexao, $sql);
             </table>
         </div>                                           
                 
-         <h2>Cadastro de usuários</h2>
             <table>
                 <tr>
                     <th>ID</th>
@@ -87,6 +86,7 @@ $resultado = mysqli_query($conexao, $sql);
                     <th>Email</th>-
                 </tr>
                 <?php while ($cliente = mysqli_fetch_assoc($clientes)) {?>
+                
                         <tr>
                             <td><?php echo $cliente["id"] ?></td>
                             <td><?php echo $cliente["Nome"] ?></td>
@@ -110,7 +110,6 @@ $resultado = mysqli_query($conexao, $sql);
 
     </main>
     <footer>
-
     </footer>
 
 
