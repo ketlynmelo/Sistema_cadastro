@@ -2,20 +2,29 @@
 
 include "../infra/conexao.php";
 
-$nome = $POST["nome"];
-$descricao = $POST["descricao"];
-$preco = $POST["preco"];
-$categoria = $POST["categoria"];
+$nome = $_POST["nome"];
+$descricao = $_POST["descricao"];
+$preco = $_POST["preco"];
+$categoria = $_POST["categoria"];
 
-$sql = "INSERT INTO pratos (nome, descricao, preco, categoria) VALUES ('?','?','?','?')";
+$sql = "INSERT INTO pratos (nome, descricao, preco, categoria, id_cliente) VALUES (?,?,?,?,?)";
 
-stmt = mysqli_prepare($conexao, $sql);
+$stmt = mysqli_prepare($conexao, $sql);
 
-mysql_stmt_bind_param ($stmt, "ssii", $nome, $descricao, $preco, $categoria);
+mysqli_stmt_bind_param (
+$stmt,
+"ssds",
+$nome, 
+$descricao, 
+$preco,
+$categoria,
+$id_cliente
+);
 
-mysql_stmt_execute($stmt);
+mysqli_stmt_execute($stmt);
 
-header("Location: ../index.php")
+header("Location: ../index.php");
+
 
 
 ?>
