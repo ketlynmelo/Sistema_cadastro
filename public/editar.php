@@ -5,13 +5,13 @@ include "../infra/conexao.php";
 $id = $_GET["id"];
 $sql = "SELECT * FROM pratos WHERE id = ?";
 
-stmt = mysqli_prepare($conexao, $sql);
+$stmt = mysqli_prepare($conexao, $sql);
 
 mysqli_stmt_bind_param ($stmt, "i", $id);
 
 mysqli_stmt_execute($stmt);
 
-$resultado = mysqli_query($stmt);
+$resultado = mysqli_stmt_get_result($stmt);
 
 $pratos =mysqli_fetch_assoc($resultado);
 

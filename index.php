@@ -12,7 +12,7 @@ $resultado = mysqli_query($conexao, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restaurante </title>
-    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@ $resultado = mysqli_query($conexao, $sql);
             <button type="submit">Cadastrar</button>
         </form>
         <div>
-            <h2>Pratos cadastrado</h2>
+            <h2>Cadastro de pratos</h2>
             <table>
                 <tr>
                     <th>Nome</th>
@@ -79,7 +79,7 @@ $resultado = mysqli_query($conexao, $sql);
             </table>
         </div>                                           
                 
-         <h2>Cadastrado de usuario</h2>
+         <h2>Cadastro de usuários</h2>
             <table>
                 <tr>
                     <th>ID</th>
@@ -98,8 +98,8 @@ $resultado = mysqli_query($conexao, $sql);
          </div>
 
         <div>
-            <h2>Adicione um novo usuario!</h2>
-            <form action="public/cadastrar_usuario.php" method="POST">
+            <h2>Adicione um novo usuário!</h2>
+            <form style="padding: 0px;" action="public/cadastrar_usuario.php" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome">
                 <br>
