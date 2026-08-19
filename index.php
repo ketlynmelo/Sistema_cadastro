@@ -1,7 +1,8 @@
 <?php
 
 include "infra/conexao.php";
-
+$sql = "SELECT * FROM pratos";
+$resultado = mysqli_query($conexao, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +45,11 @@ include "infra/conexao.php";
                     <th>Preço</th>
                     <th>Categoria</th>
                 </tr>
-                <?php while ($pratos = mysqli_fetch_assoc($pratos)) { ?>
+                <?php while ($pratos = mysqli_fetch_assoc($resultado)) { ?>
                     <tr>
                         <td><?php echo $pratos["nome"] ?></td>
-                        <td><?php echo $pratos["descrição"] ?></td>
-                        <td><?php echo $pratos["preço"] ?></td>
+                        <td><?php echo $pratos["descricao"] ?></td>
+                        <td><?php echo $pratos["preco"] ?></td>
                         <td><?php echo $pratos["categoria"] ?></td>
                         <td>
                             <a href="public/editar.php?id=<?php echo $pratos["id"] ?>">Editar</a>
