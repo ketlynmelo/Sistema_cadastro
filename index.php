@@ -32,6 +32,25 @@ include "infra/conexao.php";
             <label for="categoria">Categoria:</label>
             <input type="text" name="categoria">
             <br>
+            <label for="id_cliente">Cliente:</label>
+            <select name="id_cliente">
+                <option value="1">Selecione</option>
+
+                <?php
+                
+                $sql = "SELECT * FROM clientes";
+                $clientes = mysqli_query($conexao,$sql);
+
+                while ($cliente = mysqli_fetch_assoc($clientes)) { ?>
+
+                <option value=" <?php echo $cliente["id"] ?>  "> <?php echo $cliente["nome"] ?> </option>
+
+
+                <?php }; ?>
+
+            
+            </select>
+            <br>
             <button type="submit">Cadastrar</button>
         </form>
         <div>
@@ -57,21 +76,28 @@ include "infra/conexao.php";
                 <?php } ?>
             </table>
         </div>
-                
-         <h2>Cadastrado de usuarop</h2>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Email</th>-
-                </tr>
-                <?php while ($pratos = mysqli_fetch_assoc($pratos)) { ?>
-                    <tr>
-                        <td><?php echo $pratos["id"] ?></td>
-                        <td><?php echo $pratos["Nome"] ?></td>
-                        <td><?php echo $pratos["Email"] ?></td>
-                        <td>
-                           
+
+        <div>
+            <h2>Adicione um novo usuario!</h2>
+            <form action="public/cadastrar.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome">
+                <br>
+                <label for="descricao">Email:</label>
+                <input type="text" name="email">
+                <br>
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+
+        <h2>Cadastrado de usuario</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>-
+            </tr>
+        </table>
 
     </main>
     <footer>
