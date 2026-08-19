@@ -86,13 +86,27 @@ $resultado = mysqli_query($conexao, $sql);
                     <th>Nome</th>
                     <th>Email</th>-
                 </tr>
-                <?php while ($pratos = mysqli_fetch_assoc($pratos)) { ?>
-                    <tr>
-                        <td><?php echo $pratos["id"] ?></td>
-                        <td><?php echo $pratos["Nome"] ?></td>
-                        <td><?php echo $pratos["Email"] ?></td>
-                        <td>
-                           
+                <?php while ($cliente = mysqli_fetch_assoc($clientes)) {?>
+                        <tr>
+                            <td><?php echo $cliente["id"] ?></td>
+                            <td><?php echo $cliente["Nome"] ?></td>
+                            <td><?php echo $cliente["Email"] ?></td>
+                        </tr>
+                  <?php } ?> 
+                    
+
+         </div>
+
+        <div>
+            <h2>Adicione um novo usuario!</h2>
+            <form action="public/cadastrar_usuario.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome">
+                <br>
+                <label for="descricao">Email:</label>
+                <input type="text" name="email">
+                <br>
+                <button type="submit">Cadastrar</button>
 
     </main>
     <footer>
