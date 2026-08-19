@@ -1,11 +1,6 @@
 <?php
 
 include "infra/conexao.php";
-<<<<<<< HEAD
-=======
-$sql = "SELECT * FROM pratos";
-$resultado = mysqli_query($conexao, $sql);
->>>>>>> 4f299e1ab0fbd4bef64537b2b7ac60028e5fd87c
 ?>
 
 <!DOCTYPE html>
