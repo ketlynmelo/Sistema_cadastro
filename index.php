@@ -1,8 +1,11 @@
 <?php
 
 include "infra/conexao.php";
+<<<<<<< HEAD
+=======
 $sql = "SELECT * FROM pratos";
 $resultado = mysqli_query($conexao, $sql);
+>>>>>>> 4f299e1ab0fbd4bef64537b2b7ac60028e5fd87c
 ?>
 
 <!DOCTYPE html>
@@ -59,6 +62,21 @@ $resultado = mysqli_query($conexao, $sql);
                 <?php } ?>
             </table>
         </div>
+                
+         <h2>Cadastrado de usuarop</h2>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>-
+                </tr>
+                <?php while ($pratos = mysqli_fetch_assoc($pratos)) { ?>
+                    <tr>
+                        <td><?php echo $pratos["id"] ?></td>
+                        <td><?php echo $pratos["Nome"] ?></td>
+                        <td><?php echo $pratos["Email"] ?></td>
+                        <td>
+                           
 
     </main>
     <footer>
